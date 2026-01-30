@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+
+from app.api.v1.files import router as files_router
 from app.core.config import settings
 
 app = FastAPI(
@@ -41,5 +43,5 @@ async def health_check():
     }
 
 
-# Include API routers here in future phases
-# app.include_router(api_router, prefix="/api/v1")
+# Include API routers
+app.include_router(files_router, prefix="/api/v1", tags=["files"])
