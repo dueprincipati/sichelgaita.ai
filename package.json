@@ -1,8 +1,8 @@
 {
-  "name": "sichelgaida-ai-monorepo",
-  "version": "1.0.0",
+  "name": "sichelgaita-ai-monorepo",
+  "version": "0.1.0",
   "private": true,
-  "description": "Sichelgaida.AI - Data Wealth Platform Monorepo",
+  "description": "Sichelgaita.AI - Data Wealth Platform Monorepo",
   "workspaces": [
     "frontend"
   ],

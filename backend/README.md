@@ -1,6 +1,6 @@
-# Sichelgaida.AI Backend
+# Sichelgaita.AI Backend
 
-FastAPI backend service for the Sichelgaida.AI Data Wealth Platform.
+FastAPI backend service for the Sichelgaita.AI Data Wealth Platform.
 
 ## Features
 

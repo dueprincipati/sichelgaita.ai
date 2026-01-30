@@ -1,4 +1,4 @@
-# Sichelgaida.AI - Data Wealth Platform
+# Sichelgaita.AI - Data Wealth Platform
 
 A modern data analytics platform that transforms raw data into actionable insights using AI-powered analysis.
 
