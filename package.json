@@ -1,8 +1,8 @@
 {
-  "name": "pandada-ai-monorepo",
+  "name": "sichelgaida-ai-monorepo",
   "version": "1.0.0",
   "private": true,
-  "description": "Pandada.AI - Data Wealth Platform Monorepo",
+  "description": "Sichelgaida.AI - Data Wealth Platform Monorepo",
   "workspaces": [
     "frontend"
   ],

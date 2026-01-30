@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "pandada-backend"
+name = "sichelgaida-backend"
 version = "0.1.0"
-description = "Pandada.AI Backend - FastAPI service for data processing and AI insights"
+description = "Sichelgaida.AI Backend - FastAPI service for data processing and AI insights"
 authors = ["Your Name <your.email@example.com>"]
 readme = "README.md"
 

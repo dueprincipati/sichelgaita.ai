@@ -1,6 +1,6 @@
-# Pandada.AI Backend
+# Sichelgaida.AI Backend
 
-FastAPI backend service for the Pandada.AI Data Wealth Platform.
+FastAPI backend service for the Sichelgaida.AI Data Wealth Platform.
 
 ## Features
 
