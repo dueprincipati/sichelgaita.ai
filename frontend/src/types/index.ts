@@ -1,9 +1,23 @@
 // Type definitions for Sichelgaita.AI
 
+// File type categories matching backend enum
+export type FileType = "csv" | "excel" | "pdf" | "image";
+
+// File extension to type category mapping
+export const FILE_EXTENSION_MAP: Record<string, FileType> = {
+  ".csv": "csv",
+  ".xlsx": "excel",
+  ".xls": "excel",
+  ".pdf": "pdf",
+  ".png": "image",
+  ".jpg": "image",
+  ".jpeg": "image",
+};
+
 export interface FileMetadata {
   id: string;
   filename: string;
-  fileType: "csv" | "excel" | "pdf" | "image";
+  fileType: FileType;
   fileSize: number;
   status: "uploading" | "processing" | "completed" | "failed";
   aiSummary: string | null;

@@ -5,6 +5,7 @@ import { FileUploader } from "@/components/workspace/FileUploader";
 import { FileCard } from "@/components/workspace/FileCard";
 import { ProjectSidebar } from "@/components/workspace/ProjectSidebar";
 import { FileMetadata, Project } from "@/types";
+import { getFileMetadata, listProjectFiles } from "@/lib/api";
 
 export default function WorkspacePage() {
   const [selectedFileId, setSelectedFileId] = useState<string | null>(null);
@@ -22,25 +23,39 @@ export default function WorkspacePage() {
     },
   ]);
 
-  const handleUploadComplete = (fileId: string) => {
-    // In production, fetch the new file metadata from backend
-    // For now, we'll add a placeholder
-    const newFile: FileMetadata = {
-      id: fileId,
-      filename: "Nuovo file",
-      fileType: "csv",
-      fileSize: 0,
-      status: "completed",
-      aiSummary: null,
-      metadata: {},
-      createdAt: new Date().toISOString(),
-    };
-    setUploadedFiles((prev) => [newFile, ...prev]);
+  const handleUploadComplete = async (fileId: string) => {
+    try {
+      // Fetch the real file metadata from backend
+      const fileMetadata = await getFileMetadata(fileId);
+      setUploadedFiles((prev) => [fileMetadata, ...prev]);
+    } catch (error) {
+      console.error("Failed to fetch file metadata:", error);
+      // Fallback to placeholder if fetch fails
+      const newFile: FileMetadata = {
+        id: fileId,
+        filename: "Nuovo file",
+        fileType: "csv",
+        fileSize: 0,
+        status: "completed",
+        aiSummary: null,
+        metadata: {},
+        createdAt: new Date().toISOString(),
+      };
+      setUploadedFiles((prev) => [newFile, ...prev]);
+    }
   };
 
-  const handleProjectSelect = (projectId: string) => {
+  const handleProjectSelect = async (projectId: string) => {
     setSelectedProjectId(projectId);
-    // In production, fetch files for this project
+    try {
+      // Fetch files for this project from backend
+      const files = await listProjectFiles(projectId);
+      setUploadedFiles(files);
+    } catch (error) {
+      console.error("Failed to fetch project files:", error);
+      // Clear files on error
+      setUploadedFiles([]);
+    }
   };
 
   const handleNewProject = () => {
