@@ -16,7 +16,7 @@ const merriweather = Merriweather({
 });
 
 export const metadata: Metadata = {
-  title: "Pandada.AI - Data Wealth Platform",
+  title: "Sichelgaita.AI - Data Wealth Platform",
   description: "Transform raw data into actionable insights with AI-powered analysis",
   viewport: "width=device-width, initial-scale=1",
 };

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "🚀 Setting up Pandada.AI Monorepo..."
+echo "🚀 Setting up Sichelgaita.AI Monorepo..."
 echo ""
 
 # Check prerequisites

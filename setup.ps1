@@ -1,7 +1,7 @@
-# Pandada.AI Monorepo Setup Script for Windows
+# Sichelgaita.AI Monorepo Setup Script for Windows
 # Run with: .\setup.ps1
 
-Write-Host "🚀 Setting up Pandada.AI Monorepo..." -ForegroundColor Cyan
+Write-Host "🚀 Setting up Sichelgaita.AI Monorepo..." -ForegroundColor Cyan
 Write-Host ""
 
 # Check prerequisites

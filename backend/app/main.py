@@ -3,9 +3,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
 
 app = FastAPI(
-    title="Pandada.AI API",
+    title="Sichelgaita.AI API",
     version="0.1.0",
-    description="Backend API for Pandada.AI Data Wealth Platform",
+    description="Backend API for Sichelgaita.AI Data Wealth Platform",
     docs_url="/docs",
     redoc_url="/redoc",
 )
@@ -24,7 +24,7 @@ app.add_middleware(
 async def root():
     """Root endpoint"""
     return {
-        "message": "Welcome to Pandada.AI API",
+        "message": "Welcome to Sichelgaita.AI API",
         "version": "0.1.0",
         "docs": "/docs",
         "redoc": "/redoc",
@@ -36,7 +36,7 @@ async def health_check():
     """Health check endpoint"""
     return {
         "status": "healthy",
-        "service": "pandada-backend",
+        "service": "sichelgaita-backend",
         "version": "0.1.0",
     }
 

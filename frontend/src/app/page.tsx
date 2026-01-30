@@ -6,7 +6,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-center p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-center font-sans text-sm">
         <h1 className="text-6xl font-bold text-center mb-8 bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent">
-          Pandada.AI
+          Sichelgaita.AI
         </h1>
         <p className="text-2xl text-center text-neutral-600 mb-12">
           Data Wealth Platform
