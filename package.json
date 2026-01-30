@@ -4,7 +4,8 @@
   "private": true,
   "description": "Sichelgaita.AI - Data Wealth Platform Monorepo",
   "workspaces": [
-    "frontend"
+    "frontend",
+    "backend"
   ],
   "scripts": {
     "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
