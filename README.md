@@ -57,7 +57,7 @@ Before you begin, ensure you have the following installed:
 ```bash
 # Clone the repository
 git clone <repository-url>
-cd pandada.ai_clone
+cd sichelgaita.ai
 
 # Copy environment file and configure
 cp .env.example .env
@@ -102,7 +102,7 @@ npm run dev:backend   # Backend only (http://localhost:8000)
 ## 📁 Project Structure
 
 ```
-pandada.ai_clone/
+sichelgaita.ai/
 ├── frontend/                 # Next.js frontend application
 │   ├── src/
 │   │   ├── app/             # App Router pages and layouts

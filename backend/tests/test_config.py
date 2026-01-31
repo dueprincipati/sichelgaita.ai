@@ -8,7 +8,7 @@ def test_settings_initialization():
     assert settings is not None
     assert settings.GEMINI_MODEL == "gemini-1.5-pro"
     assert settings.API_V1_PREFIX == "/api/v1"
-    assert settings.PROJECT_NAME == "Pandada.AI Backend"
+    assert settings.PROJECT_NAME == "Sichelgaita.AI Backend"
 
 
 def test_settings_cors_origins():

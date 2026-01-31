@@ -28,7 +28,7 @@ class Settings(BaseSettings):
 
     # API Configuration
     API_V1_PREFIX: str = "/api/v1"
-    PROJECT_NAME: str = "Pandada.AI Backend"
+    PROJECT_NAME: str = "Sichelgaita.AI Backend"
 
     model_config = SettingsConfigDict(
         env_file=str(ENV_FILE),

@@ -93,7 +93,7 @@ Write-Host ""
 
 # Summary
 Write-Host "════════════════════════════════════════════════════════════" -ForegroundColor Cyan
-Write-Host "✅ Setup complete! Your Pandada.AI monorepo is ready." -ForegroundColor Green
+Write-Host "✅ Setup complete! Your Sichelgaita.AI monorepo is ready." -ForegroundColor Green
 Write-Host "════════════════════════════════════════════════════════════" -ForegroundColor Cyan
 Write-Host ""
 Write-Host "Next steps:" -ForegroundColor Yellow

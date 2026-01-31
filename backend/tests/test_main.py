@@ -9,7 +9,7 @@ def test_read_root():
     response = client.get("/")
     assert response.status_code == 200
     data = response.json()
-    assert data["message"] == "Welcome to Pandada.AI API"
+    assert data["message"] == "Welcome to Sichelgaita.AI API"
     assert data["version"] == "0.1.0"
     assert "docs" in data
     assert "redoc" in data
@@ -21,5 +21,5 @@ def test_health_check():
     assert response.status_code == 200
     data = response.json()
     assert data["status"] == "healthy"
-    assert data["service"] == "pandada-backend"
+    assert data["service"] == "sichelgaita-backend"
     assert data["version"] == "0.1.0"

@@ -89,7 +89,7 @@ echo ""
 
 # Summary
 echo "════════════════════════════════════════════════════════════"
-echo "✅ Setup complete! Your Pandada.AI monorepo is ready."
+echo "✅ Setup complete! Your Sichelgaita.AI monorepo is ready."
 echo "════════════════════════════════════════════════════════════"
 echo ""
 echo "Next steps:"
