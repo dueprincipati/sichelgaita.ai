@@ -33,6 +33,9 @@ class AnalysisResult(BaseModel):
     analysis_type: Literal["trend", "anomaly", "executive_summary"]
     insights: List[InsightItem]
     chart_config: Optional[ChartConfig] = None
+    anomalies: Optional[List[Dict[str, Any]]] = None
+    key_metrics: Optional[List[Dict[str, Any]]] = None
+    recommendations: Optional[List[str]] = None
     metadata: Dict[str, Any] = Field(default_factory=dict)
     created_at: datetime
 

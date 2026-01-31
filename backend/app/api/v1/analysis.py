@@ -135,6 +135,9 @@ async def generate_analysis(request: AnalysisRequest):
                     "analysis_type": analysis_type,
                     "insights": [insight.model_dump() for insight in insights],
                     "chart_config": chart_config.model_dump() if chart_config else None,
+                    "anomalies": raw_output.get("anomalies"),
+                    "key_metrics": raw_output.get("key_metrics"),
+                    "recommendations": raw_output.get("recommendations"),
                     "metadata": metadata
                 }
                 
@@ -201,6 +204,9 @@ async def generate_analysis(request: AnalysisRequest):
                     analysis_type=db_result["analysis_type"],
                     insights=insights,
                     chart_config=chart_config,
+                    anomalies=db_result.get("anomalies"),
+                    key_metrics=db_result.get("key_metrics"),
+                    recommendations=db_result.get("recommendations"),
                     metadata=db_result.get("metadata", {}),
                     created_at=db_result["created_at"]
                 )

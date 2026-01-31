@@ -118,7 +118,8 @@ Non includere markdown o testo extra, solo JSON."""
                     mean = df[col].mean()
                     std = df[col].std()
                     
-                    if std == std:  # Check if std is not NaN
+                    # Check if std is not NaN and greater than zero to avoid division by zero
+                    if std == std and std > 0:
                         # Z-score based anomaly detection
                         z_scores = ((df[col] - mean) / std).abs()
                         outliers = df[z_scores > 3]
@@ -135,6 +136,13 @@ Non includere markdown o testo extra, solo JSON."""
                                 'count': len(outliers),
                                 'max_zscore': float(z_scores.max())
                             })
+                    elif std == std:
+                        # Column has zero standard deviation (all values are the same)
+                        statistics[col] = {
+                            'mean': float(mean),
+                            'std': 0.0,
+                            'outlier_count': 0
+                        }
 
             sample_data = df.head(100).to_dict(orient='records')
 

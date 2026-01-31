@@ -8,6 +8,9 @@ CREATE TABLE analysis_results (
     analysis_type analysis_type_enum NOT NULL,
     insights JSONB NOT NULL,
     chart_config JSONB NULL,
+    anomalies JSONB NULL,
+    key_metrics JSONB NULL,
+    recommendations JSONB NULL,
     metadata JSONB DEFAULT '{}'::jsonb,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
